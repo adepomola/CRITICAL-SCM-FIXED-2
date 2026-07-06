@@ -1,0 +1,27 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - development
+      - feature-login
+
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Repository Information
+        run: echo "GitHub Actions CI Pipeline is running successfully."
+
+      - name: List Project Files
+        run: ls -la
