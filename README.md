@@ -220,7 +220,7 @@ The changes were then committed using:
 git add .
 git commit -m "Resolve merge conflict"
 git push
-```bash
+```
 
 
 ## Preventing Future Merge Conflicts
