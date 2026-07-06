@@ -161,3 +161,78 @@ The workflow automatically runs whenever code is pushed to the main, development
 - Supports continuous integration.
 - Reduces manual verification.
 - Improves collaboration for distributed development teams.
+# Task 4: Enforce Security Best Practices
+
+## Repository Security
+
+To improve repository security and maintain code integrity, the following best practices were implemented.
+
+### User Access Control
+
+GitHub repository permissions ensure that only authorized team members can push changes or approve pull requests.
+
+### SSH Authentication
+
+SSH keys provide secure authentication between developers' computers and GitHub without repeatedly entering passwords.
+
+### Branch Protection
+
+The main branch should be protected by requiring pull requests before merging changes. Direct pushes to the production branch should be restricted.
+
+### Signed Commits
+
+Developers should use GPG or SSH commit signing to verify the authenticity of commits and ensure that code changes originate from trusted contributors.
+
+### Audit Trail
+
+Git maintains a complete history of commits, branches, merges, and contributors. This audit trail allows teams to track every code change and quickly identify when and why changes were made.
+
+## Benefits
+
+- Improved repository security
+- Better accountability
+- Protected production code
+- Secure collaboration
+- Complete change history
+
+# Task 5: Handle a Real-World Git Challenge
+
+## Merge Conflict Scenario
+
+During development, two developers modified the same file on different branches, resulting in a merge conflict when attempting to merge the branches.
+
+## Conflict Resolution Process
+
+The following Git commands were used during the conflict resolution process:
+
+```bash
+git pull origin main
+git status
+git merge feature-login
+```
+
+
+After identifying the conflicting sections, the file was edited manually to keep the correct changes. The conflict markers were removed, and the resolved file was saved.
+
+The changes were then committed using:
+
+```bash
+git add .
+git commit -m "Resolve merge conflict"
+git push
+```bash
+
+
+## Preventing Future Merge Conflicts
+
+To reduce merge conflicts in future projects, the team will:
+
+- Communicate regularly before modifying shared files.
+- Create smaller and more frequent pull requests.
+- Pull the latest changes before starting new work.
+- Perform code reviews before merging.
+- Use feature branches for independent development.
+
+## Conclusion
+
+This project demonstrated how Git supports distributed software development through feature branching, pull requests, merge conflict resolution, GitHub Actions, and security best practices. These practices improve collaboration, code quality, and project reliability.
